@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { WifiNetwork, SecurityAuditResult, ToolTerminal, RouterStatus } from "./types";
 import { mockNetworks, mockRouterStatus, simulatedAuditTools } from "./data";
-import { NetworkItem } from "./components/NetworkItem";
-import { AIAuditPanel } from "./components/AIAuditPanel";
-import { WinboxTerminal } from "./components/WinboxTerminal";
+
+// PERBAIKAN: Menggunakan Default Import agar sesuai dengan pemanggilan komponen di bawah
+import NetworkItem from "./components/NetworkItem";
+import AIAuditPanel from "./components/AIAuditPanel";
+import WinboxTerminal from "./components/WinboxTerminal";
+
 import { 
   Network, 
   Cpu, 
@@ -426,7 +429,6 @@ export default function App() {
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wibox.security.auditor">
 
-    <!-- Permissions required for scanning real WiFi -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
