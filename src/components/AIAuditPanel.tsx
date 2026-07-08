@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import { WifiNetwork, SecurityAuditResult } from "../types";
-import { ShieldCheck, ShieldAlert, Shield, AlertTriangle, Lightbulb, RefreshCw, Sparkles, Send } from "lucide-react";
+// PERBAIKAN: Menambahkan ShieldAlert ke dalam list import lucide-react
+import { 
+  ShieldCheck, 
+  ShieldAlert, 
+  Shield, 
+  AlertTriangle, 
+  Lightbulb, 
+  RefreshCw, 
+  Sparkles, 
+  Send 
+} from "lucide-react";
 
 interface AIAuditPanelProps {
   network: WifiNetwork | null;
@@ -9,12 +19,12 @@ interface AIAuditPanelProps {
   onRunAudit: (customQuery?: string) => void;
 }
 
-export const AIAuditPanel: React.FC<AIAuditPanelProps> = ({
+export default function AIAuditPanel({
   network,
   auditResult,
   isLoading,
   onRunAudit,
-}) => {
+}: AIAuditPanelProps) {
   const [customQuestion, setCustomQuestion] = useState("");
 
   if (!network) {
@@ -244,4 +254,4 @@ export const AIAuditPanel: React.FC<AIAuditPanelProps> = ({
       )}
     </div>
   );
-};
+}
