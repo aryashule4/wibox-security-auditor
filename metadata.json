@@ -1,0 +1,6 @@
+{
+  "name": "WiBox Security Auditor",
+  "description": "Professional Winbox-style network administrator, WiFi security auditor, and diagnostic dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
