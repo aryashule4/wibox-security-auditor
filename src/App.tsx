@@ -3,8 +3,9 @@ import { WifiNetwork, SecurityAuditResult, ToolTerminal, RouterStatus } from "./
 import { mockNetworks, mockRouterStatus, simulatedAuditTools } from "./data";
 
 // PERBAIKAN: Menggunakan Default Import agar sesuai dengan pemanggilan komponen di bawah
-import NetworkItem from "./components/NetworkItem";
 import AIAuditPanel from "./components/AIAuditPanel";
+
+import NetworkItem from "./components/NetworkItem";
 import WinboxTerminal from "./components/WinboxTerminal";
 
 import { 
